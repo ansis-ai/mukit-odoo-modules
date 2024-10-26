@@ -114,6 +114,13 @@
 				<code style="background-color:transparent; padding:0">option="{'no_quick_create': False}"</code> 
 				to the field.
 			</p>
+			<pre style="line-height:1; background-color:#fdfdfd; padding:8px">
+&lt;field 
+	name="tag_ids" 
+	widget="many2many_tags" 
+	option="{'no_quick_create': False}"
+/&gt;
+			</pre>
 		</div>
 	</div>
 </section>
@@ -128,6 +135,13 @@
 				which prevents the form view from opening even if it is a kanban view 
 				or a non-editable list view.
 			</p>
+			<pre style="line-height:1; background-color:#fdfdfd; padding:8px">
+&lt;field 
+	name="child_ids" 
+	widget="one2many" 
+	option="{'no_open': True}"
+/&gt;
+			</pre>
 		</div>
 	</div>
 </section>
