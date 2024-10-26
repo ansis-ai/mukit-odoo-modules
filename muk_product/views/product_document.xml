@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="view_product_document_kanban" model="ir.ui.view">
-        <field name="name">product.document</field>
+    <record id="view_product_document_search" model="ir.ui.view">
+        <field name="name">product.document.search</field>
         <field name="model">product.document</field>
-        <field name="inherit_id" ref="product.product_document_kanban"/>
-        <field name="mode">primary</field>
-        <field name="priority">100</field>
         <field name="arch" type="xml">
-            <xpath expr="//kanban" position="attributes">
-                <attribute name="js_class"/>
-            </xpath>
+            <search>
+                <field name="name"/>
+                <filter 
+                    name="all" 
+                    string="All" 
+                    domain="['|', ('active', '=', True), ('active', '=', False)]"
+                />
+                <filter 
+                    name="archived" 
+                    string="Archived" 
+                    domain="[('active', '=', False)]"
+                />
+            </search>
         </field>
     </record>
 
@@ -19,7 +26,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">product.document</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="view_id" ref="view_product_document_kanban"/>
+        <field name="search_view_id" ref="view_product_document_search"/>
         <field name="domain">
             [('res_model', 'in', ['product.template', 'product.product'])]
         </field>

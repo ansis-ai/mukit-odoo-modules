@@ -42,7 +42,7 @@
             <p>
 				A selection field which offers the option of assigning a corresponding 
 				icon to the various options. If the field is used in the list view with the 
-				<code style="background-color:transparent; padding:0"></code>noLabel</code>
+				<code style="background-color:transparent; padding:0">noLabel</code>
 				attribute, only one icon is displayed, otherwise the icon is displayed to 
 				the left of the selected text
 			</p>
@@ -79,6 +79,55 @@
 			<div class="oe_demo oe_screenshot mt16">
 				<img src="screenshot_text.png">
             </div>
+		</div>
+	</div>
+</section>
+
+<section class="oe_container">
+	<div class="oe_row oe_spaced">
+		<div class="text-justify" style="max-width:84%; margin:16px 8%">
+			<h3 class="oe_slogan">Binary Field Preview</h3>
+            <p>
+				A preview icon has been added to the binary widget. It uses the existing file 
+				viewer to display the binary content. Because the file viewer is used, the 
+				same file types are also supported. Furthermore, the attribute 
+				<code style="background-color:transparent; padding:0">noLabel</code> 
+				is now supported.
+			</p>
+			<div class="oe_demo oe_screenshot mt16">
+				<img src="screenshot_preview.png">
+            </div>
+		</div>
+	</div>
+</section>
+
+<section class="oe_container">
+	<div class="oe_row oe_spaced">
+		<div class="text-justify" style="max-width:84%; margin:16px 8%">
+			<h3 class="oe_slogan">Quick Create</h3>
+            <p>
+				If the quick create feature for many2one and many2many tags is to be 
+				deactivated by default, the system parameter 
+				<code style="background-color:transparent; padding:0">muk_web_utils.disable_quick_create</code> 
+				can be set. It is then still possible to activate the quick create 
+				feature for certain fields by explicitly passing 
+				<code style="background-color:transparent; padding:0">option="{'no_quick_create': False}"</code> 
+				to the field.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="oe_container">
+	<div class="oe_row oe_spaced">
+		<div class="text-justify" style="max-width:84%; margin:16px 8%">
+			<h3 class="oe_slogan">X2Many Fields</h3>
+            <p>
+				For one2many and many2many there is now a new option 
+				<code style="background-color:transparent; padding:0">no_open</code> 
+				which prevents the form view from opening even if it is a kanban view 
+				or a non-editable list view.
+			</p>
 		</div>
 	</div>
 </section>

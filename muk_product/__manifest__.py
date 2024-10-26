@@ -5,8 +5,8 @@
         This module gives you a quick view of all your products, 
         accessible from your home menu.
     ''',
-    'version': '18.0.1.1.3', 
-    'category': 'Sales/Sales',
+    'version': '18.0.1.1.4', 
+    'category': 'Sales/Product',
     'license': 'LGPL-3', 
     'author': 'MuK IT',
     'website': 'http://www.mukit.at',
