@@ -10,5 +10,8 @@ patch(Dialog.prototype, {
     		session.dialog_size !== 'maximize' ? this.props.size : 'fs'
         );
         this.data.initalSize = this.props?.size || 'lg';
+    },
+    onClickDialogSizeToggle() {
+        this.data.size = this.data.size === 'fs' ? this.data.initalSize : 'fs';
     }
 });
